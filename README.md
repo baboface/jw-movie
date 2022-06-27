@@ -6,10 +6,20 @@
 - [x] Router setup
 - [x] Create Components
 - [x] Helmet
-- [] Get Api
-- [] Use Effect
+- [x] Get Api
+
+## Main page
+
+- [x] Use Effect
 - [] Try Catch
 - [] Header Event
 - [] Slide
-- [] Detail Page
+
+## Detail page
+
 - [] Video
+
+## Search page
+
+-[] Css Grid
+-[]
