@@ -2,16 +2,20 @@
 
 # Todo
 
+## Global
+
 - [x] Package install
 - [x] Router setup
 - [x] Create Components
 - [x] Helmet
 - [x] Get Api
+- [] Container
 
 ## Main page
 
 - [x] Use Effect
-- [] Try Catch
+- [x] Try Catch
+- [] Loading
 - [] Header Event
 - [] Slide
 
