@@ -3,7 +3,9 @@ import { movieApi } from "../../../api";
 import { movieNum } from "../../../constants/constant";
 import { Loading } from "../../Loading";
 import { MainBanner } from "./MainBanner";
-// console.log(movieApi.nowPlaying());
+import "swiper/css";
+import { Container } from "../../Container";
+import { Movies } from "./Movies";
 
 export const Home = () => {
   const [playing, setPlaying] = useState();
@@ -55,7 +57,18 @@ export const Home = () => {
       {loading ? (
         <Loading />
       ) : (
-        <>{playing && <MainBanner playData={playing[movieNum]} />}</>
+        <>
+          {playing && (
+            <>
+              <MainBanner playData={playing[movieNum]} />
+              <Container>
+                <Movies movieData={playing} movieTitle={"현재 상영 영화"} />
+                <Movies movieData={rated} movieTitle={"인기 상영 영화"} />
+                <Movies movieData={upComming} movieTitle={"상영 예정 영화"} />
+              </Container>
+            </>
+          )}
+        </>
       )}
     </div>
   );
