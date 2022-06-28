@@ -55,7 +55,7 @@ export const Home = () => {
       {loading ? (
         <Loading />
       ) : (
-        <>{playing && <MainBanner palyData={playing[movieNum]} />}</>
+        <>{playing && <MainBanner playData={playing[movieNum]} />}</>
       )}
     </div>
   );
