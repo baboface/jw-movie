@@ -51,7 +51,7 @@ const Menu = styled.li`
 
 export const Header = () => {
   const [bg, setBg] = useState("transparent");
-
+  // => props 지정할때 필요
   const handleScroll = () => {
     const sct = window.pageYOffset;
     if (sct > 500) {
