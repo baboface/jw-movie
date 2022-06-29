@@ -19,8 +19,8 @@
 - [x] Try Catch
 - [x] Loading
 - [x] Slide
-- [] Slide Link
 - [] Slide Navigation
+- [] Slide Link
 - [] Header Event
 - [] 404 Image
 

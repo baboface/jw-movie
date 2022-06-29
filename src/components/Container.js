@@ -3,6 +3,9 @@ import { mainStyle } from "../styles/globalStyle";
 
 const Section = styled.section`
   padding: ${mainStyle.padding};
+  @media screen and (max-width: 500px) {
+    padding: ${mainStyle.padding};
+  }
 `;
 
 export const Container = ({ children }) => {
