@@ -51,7 +51,7 @@ const Menu = styled.li`
 
 export const Header = () => {
   const [bg, setBg] = useState("transparent");
-  // => props 지정할때 필요
+  // => props (전달자)지정할때 필요
   const handleScroll = () => {
     const sct = window.pageYOffset;
     if (sct > 500) {
@@ -60,7 +60,7 @@ export const Header = () => {
       setBg("transparent");
     }
   };
-  // =>페이지 좌표값
+  // =>페이지 좌표값,조건문
 
   window.addEventListener(`scroll`, handleScroll);
   // =>스크롤 이벤트 정의
