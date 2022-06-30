@@ -10,6 +10,11 @@ const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
+
+  @media screen and (max-width: 500px) {
+    display: block;
+    /* flex-direction: column; */
+  }
 `;
 
 const Con = styled.div`
@@ -17,17 +22,29 @@ const Con = styled.div`
   &:nth-child(1) {
     height: 80vh;
   }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.h3`
   font-size: 50px;
   font-weight: 700;
   margin-bottom: 40px;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 30px;
+    font-size: 45px;
+  }
 `;
 
 const Release = styled.div`
   font-size: 20px;
   font-weight: 600;
+  @media screen and (max-width: 500px) {
+    bottom: 10%;
+    font-size: 20px;
+  }
 `;
 
 const Genres = styled.ul`
