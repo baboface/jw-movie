@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 export const PageTitle = ({ title }) => {
   return (
     <Helmet>
-      <title> JW Movie {title}</title>
+      <title> JW Movie #{title}</title>
     </Helmet>
   );
 };
