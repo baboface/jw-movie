@@ -57,7 +57,9 @@ const Menu = styled.li`
 `;
 
 const MoMenu = styled.div`
-  ul {
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
   }
 `;
 
