@@ -27,15 +27,11 @@
 ## Detail page
 
 - [x] Link
+- [x]Responsive
 - []Scroll error
-- []Responsive
 - [] Video
 
 ## Search page
 
 -[] Css Grid
 -[]
-
-햄버거 메뉴 만들기
-
-타이틀 그라데이션 만들기
