@@ -53,6 +53,7 @@ export const Search = () => {
     getValues,
     formState: { errors },
     setError,
+    clearErrors,
   } = useForm({
     mode: "onChange",
   });
@@ -67,7 +68,7 @@ export const Search = () => {
 
       if (results.length <= 0) {
         setError("result", {
-          message: "영화가 없어요..!",
+          message: "영화가 없어요!",
         });
         // =>setError("에러 이름",{message:"값"})
         // =>useForm에 있는 속성으로 에러를 설정할수 있음
@@ -94,6 +95,9 @@ export const Search = () => {
             <Input
               {...register("search", {
                 required: "내용은 필수 입니다 ",
+                onChange() {
+                  clearErrors("result");
+                },
               })}
               type="text"
               placeholder="영화검색..."
