@@ -12,7 +12,7 @@ const SFooter = styled.footer`
 export const Footer = () => {
   return (
     <SFooter>
-      <span>&copy; Park JAE-WOO {new Date().getFullYear()}</span>
+      <span>&copy; PARK JAE-WOO {new Date().getFullYear()}</span>
     </SFooter>
   );
 };

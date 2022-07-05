@@ -9,6 +9,14 @@ export const mainStyle = {
   moPadding: "0 20px",
 };
 
+export const moStyle = {
+  moWidth: "100%",
+  height: "60vh",
+  moPadding: "0 10px",
+  moColor: "white",
+  moBackground: " cover / center",
+};
+
 export const GlobalStyled = createGlobalStyle`
     ${reset}
     *{
