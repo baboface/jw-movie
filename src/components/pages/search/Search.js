@@ -7,6 +7,7 @@ import { Container } from "../../Container";
 import { Loading } from "../../Loading";
 import { PageTitle } from "../../PageTitle";
 import { Link } from "react-router-dom";
+
 const SearchWrap = styled.div`
   margin-top: 150px;
 `;
@@ -118,13 +119,10 @@ export const Search = () => {
                   <Con key={term.id}>
                     <Link to={`/detail/${term.id}`}>
                       <Bg
-                        // style={{
-                        //   background: `url(${imgUrl}${term.backdrop_path}) no-repeat center / cover`,
-                        // }}
-                        sytle={{
+                        style={{
                           background: `url(${
                             term.backdrop_path
-                              ? `${imgUrl}${term.backdrop_path}`
+                              ? `${imgUrl}${term.backdrop_path} `
                               : "https://i.ytimg.com/vi/C8WWqMKRYfk/maxresdefault.jpg"
                           }) no-repeat center / cover`,
                         }}
