@@ -23,6 +23,7 @@ export const Detail = () => {
   // console.log(movieApi.movieDetail(453395));
   const [movieData, setMovieData] = useState();
   const [videoData, setVideoData] = useState();
+  // const [videoDatas, setVideoDatas] = useState();
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
@@ -41,6 +42,12 @@ export const Detail = () => {
       } = await movieApi.video(id);
       setVideoData(results.length === 0 ? null : results[0].key);
       // console.log(results.length === 0 ? null : results[0].key);
+
+      // const {
+      //   data: { results: another },
+      // } = await movieApi.video(id);
+      // setVideoDatas(another.length === 0 ? null : another[1].key);
+
       setLoading(false);
 
       // console.log(results);
