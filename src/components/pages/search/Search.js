@@ -30,6 +30,10 @@ const ConWrap = styled.div`
   column-gap: 30px;
   row-gap: 50px;
   margin-top: 150px;
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const Con = styled.div`
