@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/https//:baboface.github.io/jw-movie/static/css/main.9bf80ff5.css",
+    "main.js": "/https//:baboface.github.io/jw-movie/static/js/main.561eb88e.js",
+    "index.html": "/https//:baboface.github.io/jw-movie/index.html",
+    "main.9bf80ff5.css.map": "/https//:baboface.github.io/jw-movie/static/css/main.9bf80ff5.css.map",
+    "main.561eb88e.js.map": "/https//:baboface.github.io/jw-movie/static/js/main.561eb88e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9bf80ff5.css",
+    "static/js/main.561eb88e.js"
+  ]
+}
