@@ -7,7 +7,7 @@ import { Container } from "../../Container";
 import { Loading } from "../../Loading";
 import { PageTitle } from "../../PageTitle";
 import { Link } from "react-router-dom";
-const SearcWrap = styled.div`
+const SearchWrap = styled.div`
   margin-top: 150px;
 `;
 
@@ -90,7 +90,7 @@ export const Search = () => {
       <PageTitle title={"Search"} />
 
       <Container>
-        <SearcWrap>
+        <SearchWrap>
           <form onSubmit={handleSubmit(searchMovie)}>
             <Input
               {...register("search", {
@@ -106,7 +106,7 @@ export const Search = () => {
             {errors?.search?.message}
             {errors?.result?.message}
           </form>
-        </SearcWrap>
+        </SearchWrap>
 
         {loading ? (
           <Loading />
@@ -118,8 +118,15 @@ export const Search = () => {
                   <Con key={term.id}>
                     <Link to={`/detail/${term.id}`}>
                       <Bg
-                        style={{
-                          background: `url(${imgUrl}${term.backdrop_path}) no-repeat center / cover`,
+                        // style={{
+                        //   background: `url(${imgUrl}${term.backdrop_path}) no-repeat center / cover`,
+                        // }}
+                        sytle={{
+                          background: `url(${
+                            term.backdrop_path
+                              ? `${imgUrl}${term.backdrop_path}`
+                              : "https://i.ytimg.com/vi/C8WWqMKRYfk/maxresdefault.jpg"
+                          }) no-repeat center / cover`,
                         }}
                       />
                       <Title>{term.title}</Title>

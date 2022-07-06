@@ -148,9 +148,7 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link Link to={"/Serch"}>
-              Search
-            </Link>
+            <Link Link to={"/Serch"} Search></Link>
           </li>
         </MoMenuWrap>
       </MoMenu>
