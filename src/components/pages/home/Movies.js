@@ -18,6 +18,10 @@ const MovieBox = styled.div`
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 1;
   }
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const HiddenBox = styled.h4`
@@ -31,6 +35,11 @@ const HiddenBox = styled.h4`
   line-height: 30px;
   text-align: center;
   padding: 40px;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+  }
 `;
 
 const Title = styled.h3`
@@ -52,7 +61,7 @@ export const Movies = ({ movieData, movieTitle }) => {
   const params = {
     breakpoints: {
       320: {
-        slidesPerView: 2.2,
+        slidesPerView: 1.2,
         spaceBetween: 10,
       },
       640: {

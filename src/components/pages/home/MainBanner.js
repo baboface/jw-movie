@@ -72,6 +72,10 @@ const PlayBox = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 10;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const PlayBar = styled.div`
@@ -92,17 +96,17 @@ export const MainBanner = ({ playData }) => {
         background: `url(${imgUrl}/${playData.backdrop_path}) no-repeat center / cover`,
       }}
     >
-      <Title>{playData.title}</Title>
-      <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
-      <Link to={`/detail`}>
+      <Link to={`/detail/${playData.id}`}>
+        <Title>{playData.title}</Title>
+        <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
         <PlayBox>
           <PlayBar>
             <FontAwesomeIcon icon={faPlayCircle} />
           </PlayBar>
           <NowPlay>미 리 보 기</NowPlay>
         </PlayBox>
+        <BlackBg />
       </Link>
-      <BlackBg />
     </Banner>
   );
 };
