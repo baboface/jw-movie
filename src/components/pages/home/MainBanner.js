@@ -35,6 +35,12 @@ const Title = styled.div`
   }
 `;
 
+const Vote = styled.h3`
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+`;
+
 const Desc = styled.div`
   max-width: 700px;
   width: 100%;
@@ -98,6 +104,7 @@ export const MainBanner = ({ playData }) => {
       <Link to={`/detail/${playData.id}`}>
         <Title>{playData.title}</Title>
         <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
+        <Vote>평점: {playData.vote_average}</Vote>
         <PlayBox>
           <PlayBar>
             <FontAwesomeIcon icon={faPlayCircle} />
