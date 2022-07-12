@@ -69,6 +69,7 @@ const MoMenuWrap = styled.ul`
   position: absolute;
   top: 0;
   left: ${(props) => props.leftResult};
+  /* right: ${(props) => props.rightResult}; */
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(3px);
   display: flex;
@@ -101,6 +102,7 @@ export const Header = () => {
   const [bg, setBg] = useState("transparent");
   // => props (전달자)지정할때 필요
   const [left, setLeft] = useState("100%");
+  const [right, setRight] = useState("0%");
 
   const handleScroll = () => {
     const sct = window.pageYOffset;
@@ -125,7 +127,7 @@ export const Header = () => {
       </Logo>
 
       <MenuWrap>
-        <Menu>
+        <Menu onClick={() => setRight(0)}>
           <Link to={"/"}>Home</Link>
         </Menu>
         <Menu>

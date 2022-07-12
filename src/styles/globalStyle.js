@@ -4,7 +4,7 @@ import reset from "styled-reset";
 export const mainStyle = {
   bgColor: "#1d1d1d",
   color: "white",
-  mainColor: "red",
+  mainColor: "#1201FC",
   padding: "0 80px",
   moPadding: "0 20px",
 };

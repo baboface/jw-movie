@@ -89,7 +89,7 @@ export const MovieDetail = ({ movieData }) => {
           ))}
         </Genres>
 
-        <Desc>{movieData.overview}</Desc>
+        <Desc>{movieData.overview.slice(0, 100) + "..."}</Desc>
       </Con>
     </Wrap>
   );

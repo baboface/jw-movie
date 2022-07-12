@@ -1,3 +1,6 @@
+import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { imgUrl } from "../../../constants/constant";
 import { mainStyle } from "../../../styles/globalStyle";
@@ -60,6 +63,28 @@ const BlackBg = styled.div`
   left: 0;
 `;
 
+const PlayBox = styled.div`
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  background-color: #1201fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+`;
+
+const PlayBar = styled.div`
+  font-size: 24px;
+  font-weight: 400;
+`;
+
+const NowPlay = styled.h3`
+  font-size: 18px;
+  font-weight: 400;
+  margin-left: 30px;
+`;
+
 export const MainBanner = ({ playData }) => {
   return (
     <Banner
@@ -69,6 +94,14 @@ export const MainBanner = ({ playData }) => {
     >
       <Title>{playData.title}</Title>
       <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
+      <Link to={`/detail`}>
+        <PlayBox>
+          <PlayBar>
+            <FontAwesomeIcon icon={faPlayCircle} />
+          </PlayBar>
+          <NowPlay>미 리 보 기</NowPlay>
+        </PlayBox>
+      </Link>
       <BlackBg />
     </Banner>
   );

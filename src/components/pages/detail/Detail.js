@@ -70,13 +70,13 @@ export const Detail = () => {
         <Loading />
       ) : (
         <Container>
-          {movieData && <MovieDetail movieData={movieData} />}
           {videoData ? (
             <Iframe
               src={`https://www.youtube.com/embed/${videoData}`}
               allowfullscreen
             ></Iframe>
           ) : null}
+          {movieData && <MovieDetail movieData={movieData} />}
         </Container>
       )}
     </div>

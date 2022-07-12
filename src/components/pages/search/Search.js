@@ -40,6 +40,30 @@ const Con = styled.div`
   /* width: 200px; */
 `;
 
+const MovieBox = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &:hover h4 {
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1;
+  }
+`;
+
+const HiddenBox = styled.h4`
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  opacity: 0;
+  line-height: 30px;
+  text-align: center;
+  padding: 40px;
+`;
+
 const Bg = styled.div`
   height: 300px;
 `;
@@ -122,15 +146,20 @@ export const Search = () => {
                 {searchTerm.map((term) => (
                   <Con key={term.id}>
                     <Link to={`/detail/${term.id}`}>
-                      <Bg
-                        style={{
-                          background: `url(${
-                            term.backdrop_path
-                              ? `${imgUrl}${term.backdrop_path} `
-                              : "https://i.ytimg.com/vi/C8WWqMKRYfk/maxresdefault.jpg"
-                          }) no-repeat center / cover`,
-                        }}
-                      />
+                      <MovieBox>
+                        <Bg
+                          style={{
+                            background: `url(${
+                              term.backdrop_path
+                                ? `${imgUrl}${term.backdrop_path} `
+                                : "https://i.ytimg.com/vi/C8WWqMKRYfk/maxresdefault.jpg"
+                            }) no-repeat center / cover`,
+                          }}
+                        />
+                        <HiddenBox>
+                          {term.overview.slice(0, 100) + "..."}
+                        </HiddenBox>
+                      </MovieBox>
                       <Title>{term.title}</Title>
                     </Link>
                   </Con>
