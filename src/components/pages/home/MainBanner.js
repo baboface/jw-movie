@@ -71,7 +71,6 @@ const PlayBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
 
   @media screen and (max-width: 500px) {
     display: none;

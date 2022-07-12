@@ -33,6 +33,12 @@ const Title = styled.h3`
   }
 `;
 
+const OriginalTitle = styled.h3`
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+`;
+
 const Release = styled.div`
   font-size: 20px;
   font-weight: 600;
@@ -58,6 +64,12 @@ const Runtime = styled.div`
   margin-top: 20px;
 `;
 
+const Vote = styled.h3`
+  font-size: 20px;
+  margin-top: 20px;
+  font-weight: 600;
+`;
+
 const Desc = styled.p`
   font-size: 18px;
   font-weight: 300;
@@ -66,7 +78,6 @@ const Desc = styled.p`
   opacity: 0.8;
   letter-spacing: 0.5px;
 `;
-
 export const MovieDetail = ({ movieData }) => {
   return (
     <Wrap>
@@ -81,14 +92,15 @@ export const MovieDetail = ({ movieData }) => {
       />
       <Con>
         <Title>{movieData.title}</Title>
+        <OriginalTitle>{movieData.original_title}</OriginalTitle>
         <Release>개봉일: {movieData.release_date}</Release>
         <Runtime>{movieData.runtime}분</Runtime>
+        <Vote>평점: {movieData.vote_average}</Vote>
         <Genres>
           {movieData.genres.map((genre) => (
             <li key={genre.id}>{genre.name}</li>
           ))}
         </Genres>
-
         <Desc>{movieData.overview.slice(0, 100) + "..."}</Desc>
       </Con>
     </Wrap>

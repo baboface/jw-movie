@@ -48,6 +48,12 @@ const Title = styled.h3`
   margin-bottom: 30px;
 `;
 
+const Vote = styled.h3`
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 400;
+`;
+
 const MovieImg = styled.div`
   height: 250px;
 `;
@@ -92,6 +98,7 @@ export const Movies = ({ movieData, movieTitle }) => {
                 <HiddenBox>{play.overview.slice(0, 100) + "..."}</HiddenBox>
               </MovieBox>
               <MovieTitle>{play.title}</MovieTitle>
+              <Vote>평점: {play.vote_average}</Vote>
             </Link>
           </SwiperSlide>
         ))}
