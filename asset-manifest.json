@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/jw-movie/static/css/main.9bf80ff5.css",
-    "main.js": "/jw-movie/static/js/main.f6cee63a.js",
+    "main.js": "/jw-movie/static/js/main.31b59c10.js",
     "index.html": "/jw-movie/index.html",
     "main.9bf80ff5.css.map": "/jw-movie/static/css/main.9bf80ff5.css.map",
-    "main.f6cee63a.js.map": "/jw-movie/static/js/main.f6cee63a.js.map"
+    "main.31b59c10.js.map": "/jw-movie/static/js/main.31b59c10.js.map"
   },
   "entrypoints": [
     "static/css/main.9bf80ff5.css",
-    "static/js/main.f6cee63a.js"
+    "static/js/main.31b59c10.js"
   ]
 }
