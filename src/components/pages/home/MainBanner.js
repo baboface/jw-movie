@@ -39,6 +39,9 @@ const Vote = styled.h3`
   font-size: 18px;
   font-weight: 400;
   margin-top: 10px;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const Desc = styled.div`
@@ -109,7 +112,7 @@ export const MainBanner = ({ playData }) => {
           <PlayBar>
             <FontAwesomeIcon icon={faPlayCircle} />
           </PlayBar>
-          <NowPlay>미 리 보 기</NowPlay>
+          <NowPlay>자세히보기</NowPlay>
         </PlayBox>
         <BlackBg />
       </Link>

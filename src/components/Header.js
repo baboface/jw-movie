@@ -69,7 +69,6 @@ const MoMenuWrap = styled.ul`
   position: absolute;
   top: 0;
   left: ${(props) => props.leftResult};
-  /* right: ${(props) => props.rightResult}; */
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(3px);
   display: flex;
@@ -127,7 +126,7 @@ export const Header = () => {
       </Logo>
 
       <MenuWrap>
-        <Menu onClick={() => setRight(0)}>
+        <Menu>
           <Link to={"/"}>Home</Link>
         </Menu>
         <Menu>
@@ -145,12 +144,12 @@ export const Header = () => {
             <FontAwesomeIcon icon={faClose} />
           </CloseBtn>
           <li>
-            <Link Link to={"/"}>
+            <Link Link to={"/"} onClick={() => setLeft("100%")}>
               Home
             </Link>
           </li>
           <li>
-            <Link Link to={"/search"}>
+            <Link Link to={"/search"} onClick={() => setLeft("100%")}>
               Search
             </Link>
           </li>
