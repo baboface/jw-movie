@@ -32,7 +32,7 @@ const HiddenBox = styled.h4`
   left: 0;
   background-color: rgba(0, 0, 0, 0);
   opacity: 0;
-  line-height: 30px;
+  line-height: 20px;
   text-align: center;
   padding: 40px;
   @media screen and (max-width: 500px) {

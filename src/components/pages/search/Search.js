@@ -28,7 +28,7 @@ const ConWrap = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   column-gap: 30px;
-  row-gap: 50px;
+  row-gap: 80px;
   margin-top: 150px;
 
   @media screen and (max-width: 500px) {
@@ -71,6 +71,12 @@ const Bg = styled.div`
 const Title = styled.h3`
   margin-top: 10px;
   font-size: 18px;
+`;
+
+const Vote = styled.h3`
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 400;
 `;
 
 export const Search = () => {
@@ -161,6 +167,7 @@ export const Search = () => {
                         </HiddenBox>
                       </MovieBox>
                       <Title>{term.title}</Title>
+                      <Vote>평점: {term.vote_average}</Vote>
                     </Link>
                   </Con>
                 ))}
