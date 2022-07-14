@@ -1,5 +1,10 @@
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { movieApi } from "../../../api";
 import { imgUrl } from "../../../constants/constant";
+
+const WrapBox = styled.div``;
 
 const Wrap = styled.div`
   display: flex;
@@ -78,31 +83,52 @@ const Desc = styled.p`
   opacity: 0.8;
   letter-spacing: 0.5px;
 `;
+
 export const MovieDetail = ({ movieData }) => {
+  // const [provider, setProvider] = useState();
+  // const { id } = useParams();
+
+  // useEffect(() => {
+  //   const movieData = async () => {
+  //     try {
+  //       const {
+  //         data: { results: providerData },
+  //       } = await movieApi.provider(id);
+  //       setProvider(providerData);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   movieData();
+  // }, []);
+  // console.log(provider);
+
   return (
-    <Wrap>
-      <Con
-        style={{
-          background: `url(${
-            movieData.backdrop_path
-              ? `${imgUrl}${movieData.backdrop_path}`
-              : "https://i.ytimg.com/vi/C8WWqMKRYfk/maxresdefault.jpg"
-          }) no-repeat center / cover`,
-        }}
-      />
-      <Con>
-        <Title>{movieData.title}</Title>
-        <OriginalTitle>{movieData.original_title}</OriginalTitle>
-        <Release>개봉일: {movieData.release_date}</Release>
-        <Runtime>{movieData.runtime}분</Runtime>
-        <Vote>평점: {movieData.vote_average}</Vote>
-        <Genres>
-          {movieData.genres.map((genre) => (
-            <li key={genre.id}>{genre.name}</li>
-          ))}
-        </Genres>
-        <Desc>{movieData.overview.slice(0, 100) + "..."}</Desc>
-      </Con>
-    </Wrap>
+    <WrapBox>
+      <Wrap>
+        <Con
+          style={{
+            background: `url(${
+              movieData.backdrop_path
+                ? `${imgUrl}${movieData.backdrop_path}`
+                : "https://i.ytimg.com/vi/C8WWqMKRYfk/maxresdefault.jpg"
+            }) no-repeat center / cover`,
+          }}
+        />
+        <Con>
+          <Title>{movieData.title}</Title>
+          <OriginalTitle>{movieData.original_title}</OriginalTitle>
+          <Release>개봉일: {movieData.release_date}</Release>
+          <Runtime>{movieData.runtime}분</Runtime>
+          <Vote>평점: {movieData.vote_average}</Vote>
+          <Genres>
+            {movieData.genres.map((genre) => (
+              <li key={genre.id}>{genre.name}</li>
+            ))}
+          </Genres>
+          <Desc>{movieData.overview.slice(0, 100) + "..."}</Desc>
+        </Con>
+      </Wrap>
+    </WrapBox>
   );
 };

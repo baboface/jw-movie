@@ -21,4 +21,5 @@ export const movieApi = {
         query: term,
       },
     }),
+  // provider: (id) => api.get(`movie/${id}/watch/providers`),
 };

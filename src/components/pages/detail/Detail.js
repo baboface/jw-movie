@@ -60,7 +60,7 @@ export const Detail = () => {
   }, []);
 
   // console.log(movieData);
-  console.log(videoData);
+  // console.log(videoData);
 
   return (
     <div>
