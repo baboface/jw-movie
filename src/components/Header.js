@@ -1,4 +1,9 @@
-import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBars,
+  faClose,
+  faHome,
+  faSearch,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -49,7 +54,7 @@ const MenuWrap = styled.ul`
 
 const Menu = styled.li`
   margin-left: 100px;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
   @media screen and (max-width: 500px) {
     margin-left: 20px;
@@ -101,7 +106,6 @@ export const Header = () => {
   const [bg, setBg] = useState("transparent");
   // => props (전달자)지정할때 필요
   const [left, setLeft] = useState("100%");
-  const [right, setRight] = useState("0%");
 
   const handleScroll = () => {
     const sct = window.pageYOffset;
@@ -127,10 +131,14 @@ export const Header = () => {
 
       <MenuWrap>
         <Menu>
-          <Link to={"/"}>Home</Link>
+          <Link to={"/"}>
+            <FontAwesomeIcon icon={faHome} />
+          </Link>
         </Menu>
         <Menu>
-          <Link to={"/search"}>Search</Link>
+          <Link to={"/search"}>
+            <FontAwesomeIcon icon={faSearch} />
+          </Link>
         </Menu>
       </MenuWrap>
 
