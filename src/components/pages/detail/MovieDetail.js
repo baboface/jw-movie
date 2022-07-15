@@ -48,6 +48,7 @@ const OriginalTitle = styled.h3`
 const Release = styled.div`
   font-size: 20px;
   font-weight: 600;
+  margin-top: 20px;
   @media screen and (max-width: 500px) {
     bottom: 10%;
     font-size: 20px;
@@ -85,24 +86,29 @@ const Desc = styled.p`
   letter-spacing: 0.5px;
 `;
 
-export const MovieDetail = ({ movieData }) => {
-  // const [provider, setProvider] = useState();
-  // const { id } = useParams();
+const CreditsTitle = styled.h3`
+  font-size: 18px;
+  margin-top: 20px;
+`;
 
-  // useEffect(() => {
-  //   const movieData = async () => {
-  //     try {
-  //       const {
-  //         data: { results: providerData },
-  //       } = await movieApi.provider(id);
-  //       setProvider(providerData);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   movieData();
-  // }, []);
-  // console.log(provider);
+export const MovieDetail = ({ movieData }) => {
+  const [credit, setCredit] = useState();
+  const { id } = useParams();
+
+  // console.log(credit[0]);
+  useEffect(() => {
+    const movieData = async () => {
+      try {
+        const {
+          data: { cast },
+        } = await movieApi.credit(id);
+        setCredit(cast);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    movieData();
+  }, []);
 
   return (
     <WrapBox>
@@ -119,6 +125,7 @@ export const MovieDetail = ({ movieData }) => {
         <Con>
           <Title>{movieData.title}</Title>
           <OriginalTitle>{movieData.original_title}</OriginalTitle>
+          {credit && <CreditsTitle>{credit[0].name}</CreditsTitle>}
           <Release>개봉일: {movieData.release_date}</Release>
           <Runtime>{movieData.runtime}분</Runtime>
           <Vote>평점: {movieData.vote_average}</Vote>
