@@ -64,8 +64,8 @@ const BlackBg = styled.div`
   height: 60vh;
   background: linear-gradient(
     180deg,
-    rgba(33, 33, 33, 0) 0%,
-    rgba(107, 107, 107, 1) 100%
+    rgba(02, 02, 02, 0) 0%,
+    rgba(0, 0, 0, 0.7) 80%
   );
   position: absolute;
   bottom: 0;
@@ -76,10 +76,12 @@ const PlayBox = styled.div`
   width: 200px;
   height: 50px;
   margin-top: 30px;
-  background-color: #1201fc;
+  background-color: ${mainStyle.bgColor};
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 8;
 
   @media screen and (max-width: 500px) {
     display: none;

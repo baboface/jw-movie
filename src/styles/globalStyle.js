@@ -2,9 +2,9 @@ import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
 export const mainStyle = {
-  bgColor: "#1d1d1d",
+  bgColor: "#0F044C",
   color: "white",
-  mainColor: "#1201FC",
+  mainColor: "#787A91",
   padding: "0 80px",
   moPadding: "0 20px",
 };

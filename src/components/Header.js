@@ -47,6 +47,9 @@ const MenuWrap = styled.ul`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  a {
+    color: ${mainStyle.mainColor};
+  }
   @media screen and (max-width: 500px) {
     display: none;
   }
@@ -74,7 +77,7 @@ const MoMenuWrap = styled.ul`
   position: absolute;
   top: 0;
   left: ${(props) => props.leftResult};
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;

@@ -87,15 +87,15 @@ const Desc = styled.p`
 `;
 
 const CreditsTitle = styled.h3`
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 400;
   margin-top: 20px;
 `;
 
 export const MovieDetail = ({ movieData }) => {
   const [credit, setCredit] = useState();
   const { id } = useParams();
-
-  // console.log(credit[0]);
+  // const creditss = credit.slice(0, 5);
   useEffect(() => {
     const movieData = async () => {
       try {
@@ -109,6 +109,7 @@ export const MovieDetail = ({ movieData }) => {
     };
     movieData();
   }, []);
+  // console.log(credit);
 
   return (
     <WrapBox>
@@ -125,7 +126,7 @@ export const MovieDetail = ({ movieData }) => {
         <Con>
           <Title>{movieData.title}</Title>
           <OriginalTitle>{movieData.original_title}</OriginalTitle>
-          {credit && <CreditsTitle>{credit[0].name}</CreditsTitle>}
+
           <Release>개봉일: {movieData.release_date}</Release>
           <Runtime>{movieData.runtime}분</Runtime>
           <Vote>평점: {movieData.vote_average}</Vote>
@@ -135,6 +136,14 @@ export const MovieDetail = ({ movieData }) => {
             ))}
           </Genres>
           <Desc>{movieData.overview.slice(0, 100) + "..."}</Desc>
+          {credit && (
+            <>
+              {/* {console.log(creditss)} */}
+              {credit.slice(0, 7).map((credits) => (
+                <CreditsTitle>{credits.name}</CreditsTitle>
+              ))}
+            </>
+          )}
         </Con>
       </Wrap>
     </WrapBox>
